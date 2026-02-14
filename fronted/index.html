@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codac Apuestas</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+<header>
+    <img src="assets/logo.png" alt="Codac Logo" class="logo">
+    <h1>Codac Apuestas</h1>
+</header>
+<main>
+    <section class="bet-section">
+        <h2>Saldo: Q<span id="balance">0</span></h2>
+        <input type="number" id="betAmount" placeholder="Monto a apostar">
+        <button id="placeBet">Apostar</button>
+        <p id="result"></p>
+
+        <h3>Depositar con tarjeta (Stripe)</h3>
+        <input type="number" id="depositAmount" placeholder="Monto a depositar">
+        <button id="depositStripe">Depositar</button>
+
+        <h3>Vincular Banrural</h3>
+        <button id="connectBank">Vincular cuenta Banrural</button>
+
+        <h3>ebi‑pay 4.0.3 (placeholder)</h3>
+        <form id="ebiForm" action="https://link.ebi.com.gt/pay" method="POST">
+            <input type="hidden" name="merchant_token" value="TU_TOKEN_DE_EBI_PROPORCIONADO">
+            <input type="hidden" name="amount" id="ebiAmount">
+            <input type="hidden" name="order_id" value="CODAC_ORDER_123">
+            <button type="submit">Pagar con ebi‑pay</button>
+        </form>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
