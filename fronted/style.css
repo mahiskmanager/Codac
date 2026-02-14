@@ -1,0 +1,8 @@
+body { font-family: 'Segoe UI', sans-serif; background:#121212; color:#fff; display:flex; flex-direction:column; align-items:center; margin:0; padding:0; }
+header { text-align:center; margin:20px; }
+.logo { width:100px; animation:spin 15s linear infinite; }
+section { background: rgba(255,255,255,0.05); padding:20px; border-radius:15px; width:300px; }
+input, button { width:100%; margin:10px 0; padding:10px; border-radius:8px; border:none; }
+button { background: linear-gradient(90deg,#ff0066,#ffcc00); color:#000; font-weight:bold; cursor:pointer; transition:0.2s; }
+button:hover { transform: scale(1.05); }
+@keyframes spin {0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
